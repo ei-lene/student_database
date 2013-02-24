@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Flatiron students</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div class="header">Winter 2013 class of students
+    </div>
+
+      <% @students.each do |s| %>
+        <div class="student">        
+          <div>
+            <span class="headings">First name: </span>
+            <span class="content"><%= s.first_name %></span> 
+          </div>
+          <div>
+            <span class="headings">Last name: </span>
+            <span class="content"><%= s.last_name %></span> 
+          </div>
+          <div>
+            <span class="headings">Github: </span>
+            <span class="content"><%= s.github %></span> 
+          </div>
+          <div>
+            <span class="headings">Blog: </span>
+            <span class="content"><%= s.blog %></span> 
+          </div>
+        </div>
+      <% end %> 
+      <div class="form">
+        <form method="post" >
+          <span class="headings title">
+            Add a student:
+          </span>  <br>
+          <span class="headings">First name: </span>
+            <input type="text" name="first_name"><br>
+          <span class="headings">Last name: </span> 
+            <input type="text" name="last_name"><br>
+          <span class="headings">Github: </span> 
+            <input type="text" name="github"><br>
+          <span class="headings">Blog: </span> 
+            <input type="text" name="blog"><br>   
+          <span class="centre">
+           <input type="submit" value="Submit">
+          </span>
+        </form>
+      </div>
+  </body>
+</html>
